@@ -32,9 +32,8 @@ last_position_of_x = e.touches[0].clientX - canvas.offsetLeft;
         
     }
 
-    function clear_area(){
-ctx.clearRect(0,0,ctx.canvas.height , ctx.canvas.width);
-    }
+    function clearArea() {
+         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
     canvas.addEventListener("touchmove", my_touchmove);
     function my_touchmove(e)
@@ -50,7 +49,7 @@ current_position_of_touch_y = e.touches[0].clientY - canvas.offsetTop;
         ctx.lineWidth = width_of_line;
 
         console.log("Last position of x and y coordinates = ");
-        
+
         console.log("x = " + last_position_of_x + "y = " + last_position_of_y);
         ctx.moveTo(last_position_of_x, last_position_of_y);
 
@@ -61,8 +60,5 @@ current_position_of_touch_y = e.touches[0].clientY - canvas.offsetTop;
 
         last_position_of_x = current_position_of_touch_x;
          last_position_of_y = current_position_of_touch_y;
-        }
-
-        
+    }
     
-
